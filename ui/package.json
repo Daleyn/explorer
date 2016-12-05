@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "npm run clean && /bin/bash ./scripts/markdown.sh && fis3 release prod -d .. --verbose --clean",
+    "dev": "npm run clean && /bin/bash ./scripts/markdown.sh && fis3 release -d .. --verbose --watch --clean",
+    "clean": "rm -rf npm_debug.log ../resources/views/* ../public/assets",
+    "bsync": "browser-sync start --files='../resource/views/**, ../public/assets/**' --no-open --host=0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "browser-sync": "^2.8.2",
+    "fis-parser-less": "^0.1.3",
+    "fis3": "^3.2.4",
+    "marked": "^0.3.5"
+  },
+  "dependencies": {
+    "big.js": "^3.1.3",
+    "bootstrap": "^3.3.5",
+    "bootstrap-datepicker": "^1.5.1",
+    "cookies-js": "^1.2.1",
+    "d3": "^3.5.6",
+    "highcharts-release": "^4.1.8",
+    "echarts": "^3.0.1",
+    "jquery": "^2.1.4",
+    "jquery-placeholder": "^2.3.1",
+    "lodash": "^3.10.1",
+    "micro-template": "^0.1.2",
+    "moment": "^2.10.6",
+    "socket.io-client": "^1.3.6",
+    "vue": "^1.0.13",
+    "twbs-pagination": "^1.3.1"
+  }
+}

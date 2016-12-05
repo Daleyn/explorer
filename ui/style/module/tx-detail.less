@@ -1,0 +1,56 @@
+@import '../bootstrap/variables.less';
+@import '../bootstrap/mixins.less';
+
+.txAbstract {
+  
+}
+
+.txAbstract-inner {
+
+}
+
+.txDetail-heading-amount {
+  float: right;
+}
+
+.txDetail {
+  .table {
+    table-layout: fixed;
+    font-size: 12px;
+  }
+}
+
+.txNotes {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 30px;
+    li {
+      .text-overflow();
+    }
+  }
+}
+
+.txNotes-addr {
+  float: right;
+  color: #c1c1c1;
+  margin-left: 100px;
+  font-family: @font-family-monospace;
+}
+
+.txNotes-content {
+  color: #888;
+}
+
+.txScripts-inner {
+  font-size: 12px;
+  font-family: @font-family-monospace;
+  line-height: 24px;
+  color: #888;
+
+  li {
+    word-wrap: break-word;
+  }
+}

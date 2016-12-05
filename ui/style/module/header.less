@@ -1,0 +1,307 @@
+@import "../bootstrap/variables.less";
+@import "../bootstrap/mixins.less";
+
+.nav-item-active() {
+  a {
+    background-color: #508ad3;
+  }
+}
+
+@nav-height: 60px;
+
+.header {
+  background-color: #3c78c2;
+  min-width: 1180px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.logo-link {
+  width: 159px;
+  height: 39px;
+  background-size: 159px 37px;
+  //.img-retina('/images/logo_en.png?__sprite', '/images/logo_en@2x.png?__sprite', 126, 37);
+  background: url('/images/logo_en@2x.png?__sprite') 0 0 no-repeat;
+}
+
+html[lang="zh-CN"] .logo-link {
+  width: 126px;
+  height: 39px;
+  background-size: 126px 37px;
+  //.img-retina('/images/logo_cn.png?__sprite', '/images/logo_cn@2x.png?__sprite', 126, 37);
+  background: url('/images/logo_cn@2x.png?__sprite') 0 0 no-repeat;
+}
+
+.logo {
+  line-height: @nav-height;
+  float: left;
+}
+
+.logo-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo-testnet3 {
+  position: relative;
+  left: 7px;
+  top: 5px;
+  display: inline-block;
+  width: 100px;
+  height: 27px;
+  background-size: 100px 27px;
+  //.img-retina('/images/logo-testnet3.png?__sprite', '/images/logo-testnet3@2x.png?__sprite', 100, 27);
+  background: url('/images/logo-testnet3@2x.png?__sprite') 0 0 no-repeat;
+}
+
+.nav {
+
+  float: left;
+  margin-left: 80px;
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .nav-item {
+    float: left;
+    position: relative;
+    line-height: @nav-height;
+
+    .icon-new-flag {
+      position: absolute;
+      z-index: 10;
+      right: -10px;
+      top: 5px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 1;
+      padding: 10px 10px;
+      border-radius: 3px;
+      color: #fff;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      .nav-item-active();
+    }
+  }
+}
+
+html[lang="en"] .nav {
+  margin-left: 30px;
+}
+
+html[lang="ru"] .nav {
+  margin-left: 20px;
+}
+
+html[lang="ja"] .nav {
+  margin-left: 25px;
+}
+
+html[lang="de"] .nav {
+  margin-left: 25px;
+}
+
+html[lang="fr"] .nav {
+  margin-left: 25px;
+}
+
+html[lang="es"] .nav {
+  margin-left: 0;
+}
+
+html[lang="pt"] .nav {
+  margin-left: 30px;
+}
+
+html[lang="bg"] .nav {
+  margin-left: 0px;
+}
+
+html[lang="cs"] .nav {
+  margin-left: 0px;
+}
+
+html[lang="el"] .nav {
+  margin-left: 30px;
+}
+
+html[lang="ru"], [lang="ja"], [lang="de"], [lang="fr"], [lang="tr"], [lang="es"], [lang="pt"],
+     [lang="bg"], [lang="cs"] {
+  .nav .nav-item a {
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px 10px;
+    border-radius: 3px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.searchbar {
+  float: right;
+  font-size: 0;
+  margin-top: 13px;
+  margin-right: 20px;
+
+  .searchbar-inner {
+    font-size: @font-size-base;
+    display: inline-block;
+    padding: 6px;
+    background-color: #508ad3;
+    border-radius: 3px;
+  }
+
+  .searchbar-input-container {
+    overflow: hidden;
+  }
+
+  .searchbar-input {
+    float: left;
+    font-size: 12px;
+    font-family: @font-family-monospace;
+    line-height: 20px;
+    height: 20px;
+    color: #fff;
+    padding: 0;
+    width: 198px;
+    transition: width 0.2s ease-in;
+    border: none;
+    background-color: transparent;
+
+    &.active {
+      width: 265px;
+    }
+
+    &::-webkit-input-placeholder {
+      font-family: @font-family-sans-serif;
+      color: #ddd;
+    }
+    &::-moz-placeholder {
+      font-family: @font-family-sans-serif;
+      color: #ddd;
+    }
+    &:-ms-input-placeholder {
+      font-family: @font-family-sans-serif;
+      color: #ddd;
+    }
+  }
+
+  .searchbar-submit {
+    float: right;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+
+    .glyphicon-search {
+      color: #fff;
+    }
+  }
+}
+
+.preference {
+  float: right;
+  margin-left: 20px;
+
+  a {
+    line-height: 60px;
+    color: #fff;
+  }
+
+
+  // 格式化默认的 bootstrap 弹出样式
+  .popover-content {
+    padding: 20px 14px;
+  }
+
+}
+
+.preference-popover-list {
+  list-style: none;
+  font-size: 12px;
+  padding-left: 0;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.preference-popover-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.preference-popover-item-option {
+  margin-bottom: 0;
+
+  input {
+    position: absolute;
+  }
+
+  span {
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #888;
+    font-weight: 400
+  }
+}
+
+.preference-popover-item-desc {
+  margin-left: 20px;
+  margin-bottom: 0;
+  color: #aaa;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.lang {
+  float: right;
+  line-height: 60px;
+}
+
+.lang-active {
+  display: inline-block;
+  line-height: 30px;
+  position: relative;
+
+  &.open > .dropdown-menu {
+    left: auto;
+    right: 0;
+    min-width: initial;
+    width: 7em;
+  }
+
+  & > a {
+    display: block;
+    line-height: 16px;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 10px;
+    background: #052748;
+    border-radius: 5px;
+
+    &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-menu > li > a {
+    padding: 3px 22px;
+    text-align: right;
+  }
+}

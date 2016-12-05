@@ -1,0 +1,26 @@
+@import '../bootstrap/variables.less';
+@import '../bootstrap/mixins.less';
+
+.e404-inner {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 300px;
+}
+
+.e404-img {
+  display: inline-block;
+  width: 304px;
+  height: 142px;
+  background-size: 304px 142px;
+  //.img-retina('/images/404.png?__sprite', '/images/404@2x.png?__sprite', 304, 142);
+  background: url('/images/404@2x.png?__sprite') 0 0 no-repeat;
+  margin-bottom: 30px;
+}
+
+.e404-desc {
+  color: #666;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Open Sans", @font-family-sans-serif;
+  line-height: 1.5;
+}

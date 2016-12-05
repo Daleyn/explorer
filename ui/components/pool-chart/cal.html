@@ -1,0 +1,25 @@
+<a href="javascript:" class="cal-month-nav cal-month-nav-left">
+    <i class="glyphicon glyphicon-chevron-left"></i>
+</a>
+<a href="javascript:" class="cal-month-nav cal-month-nav-right">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+</a>
+<div class="cal-month-bar-inner">
+    <ul class="clearfix cal-month-bar-ul">
+        <% for (var j = start.year(), jj = end.year(); j <= jj; j++) { %>
+        <li class="cal-month-bar-yearGroup">
+            <ul class="clearfix">
+                <% for (var i = ( j == start.year() ? start.month() + 1 : 1 ); i <= ( j == end.year() ? end.month() + 1 : 12 ); i++) { var key = '' + j + (i < 10 ? '0' + i : i) + '01'; %>
+                <li class="cal-month-bar-entity" data-key="<%= key %>">
+                    <div class="cal-month-bar-bg"></div>
+                    <div class="cal-month-bar-fg" style="height: <%= (data[key].p * 100).toFixed(2) %>%;"></div>
+                </li>
+                <% } %>
+            </ul>
+            <div class="cal-month-bar-yearGroup-year">
+                <%= j %>
+            </div>
+        </li>
+        <% } %>
+    </ul>
+</div>

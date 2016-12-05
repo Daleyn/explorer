@@ -1,0 +1,49 @@
+.label-coinbase {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.txio {
+  .ul-reset();
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.txio-item {
+  & + & {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.txio-address {
+  .monospace();
+  font-size: 12px;
+}
+
+.txio-amount {
+  text-align: right;
+}
+
+.tx-comment {
+  .ul-reset();
+}
+
+.tx-comment-item {
+  & + & {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.tx-comment-content {
+  font-size: 13px;
+  .text-overflow();
+}
+
+.tx-comment-address {
+  font-size: 13px;
+  a {
+    color: #878787;
+  }
+}

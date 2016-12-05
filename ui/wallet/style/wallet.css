@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-30 10:52:56
+ * @version $Id$
+ */
+body{
+    /*background-image: url(/wallet/images/wallet_CN.png);*/
+/*    background-repeat: no-repeat;*/
+}
+.main-body {
+  background-image: url(/wallet/images/web_bg.png);
+  background-repeat: no-repeat;
+  background-position:  center top;
+}
+.body-wrapper {
+    background-color:rgba(51, 51, 51, 0.22);;
+}
+/*
+TODO: make screenshot in other languages
+
+html[lang="zh-CN"] .left_img{
+  background-image: url(/wallet/images/web_picture_cn.png) ;
+  background-repeat: no-repeat;
+  width:365px;
+  height: 375px;
+  margin-top: 183px;
+  border: solid 0px red;
+  margin-left: 70px;
+  background-size: 360px auto;
+  margin-bottom: -8px;
+}
+*/
+html .left_img{
+    background-image: url(/wallet/images/multidevice.png) ;
+    background-repeat: no-repeat;
+    width:100%;
+    margin-top: 80px;
+    background-size: 540px auto;
+    height:314px;
+    margin-bottom:80px;
+}
+
+.wal_left {
+    width: 49%;
+    float: left;
+    margin-top: 44px;
+    border: solid 0px red;
+}
+.wal_right {
+    width: 50%;
+    float: right;
+    border: solid 0px red;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    text-align: center;
+}
+
+.wal_logo {
+    max-width:140px;
+}
+
+.wal_right_top {
+    padding-top:120px;
+}
+
+
+h1 {
+    font-size: 42px;
+    color: #333333;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 24px;
+    color: #333333;
+    font-weight: 400;
+}
+.thickline {
+    height: 4px;
+    background-color: #333333;
+    width: 150px;
+    margin: 0px auto;
+}
+
+
+/*
+.wal_right_center{
+    font-size: 24px;
+    text-align: center;
+    clear:both;
+    padding-top: 24px;
+    font-weight: lighter;
+    width:480px;
+    line-height: 37px;
+}
+*/
+.wal_right_bottom {
+    padding-top: 37px;
+    clear: both;
+    text-align: center;
+}
+
+html[lang="ru"] .wal_right_bottom .click-to-download {
+    font-size: 12px;
+}
+
+html[lang="ru"] .phonebtn {
+    width: 230px;
+}
+
+html[lang="ja"] .wal_right_bottom .click-to-download {
+    font-size: 12px;
+}
+
+html[lang="ja"] .phonebtn {
+    width: 230px;
+}
+
+html[lang="de"] .wal_right_bottom .click-to-download {
+    font-size: 12px;
+}
+
+html[lang="de"] .phonebtn {
+    width: 230px;
+}
+
+html[lang="fr"] .wal_right_bottom .click-to-download {
+    font-size: 10px;
+}
+
+html[lang="fr"] .phonebtn {
+    width: 230px;
+}
+
+html[lang="tr"] .wal_right_bottom .click-to-download {
+    font-size: 10px;
+}
+
+html[lang="es"] .wal_right_bottom .click-to-download {
+    font-size: 10px;
+}
+
+html[lang="pt"] .wal_right_bottom .click-to-download {
+    font-size: 10px;
+}
+
+.wal_right_footer{
+   padding-top: 40px;
+   clear: both;
+}
+
+.features-row {
+    padding:80px 0px;
+}
+
+/*
+.wal_right_img{
+    background-image: url(/wallet/images/iphone_logo_btc.png) ;
+    background-repeat: no-repeat;
+    float:left;
+    width:152px;
+    height:82px;
+    border:solid 0px red;
+    background-size: 140px auto;
+}
+*/
+.wal_right_span {
+    float:left;
+    font-size: 22px;
+    font-weight: lighter;
+    width:170px;
+    border:solid 0px red;
+    height:30px;
+    margin-left: -5px;
+    margin-top:43px;
+}
+.phonebtn{
+    float:left;
+    border-radius: 9px;
+    width:212px;
+    height:60px;
+    font-size:14px;
+    line-height: 23px;
+    padding-top: 6px;
+    padding-left: 68px;
+    text-align: left;
+    margin-left:40px;
+}
+.wal_right_bottom a{
+  text-decoration: none;
+  color:white;
+}
+.wal_right_bottom a:hover{
+    text-decoration: none;
+  color:white;
+}
+.phonebtn span{
+  display: block;
+}
+.anzhuo{
+    background-image: url(/wallet/images/iphone_icon_android.png) ;
+    background-repeat: no-repeat;
+    background-position: 20px;
+    background-color: #3C78C3;
+    border: solid 1px #3C78C3;
+    background-size: 30px auto;
+     cursor:pointer;
+}
+.ios{
+   background-image: url(/wallet/images/iphone_icon_ios.png) ;
+   background-repeat: no-repeat;
+   background-position: 20px;
+   margin-left:66px;
+   background-color: #333333;
+   border: solid 1px #3C78C3;
+   background-size: 30px auto;
+}
+
+.wal_right_footer span{
+  font-size: 14px;
+  margin-left: 10px;
+  display: block;
+}
+.code{
+  width:164px;
+  height: 164px;
+  margin-top:14px;
+  margin-bottom: 14px;
+}
+.features-row .glyphicon {
+    font-size:34px;
+}
+
+/* for large screen*/
+/*@media only screen and (min-width:1280px){}
+   .main-body {background-size: 100% auto;}
+}
+*/
+/* for 2x */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+/*  .main-body {background-image: url(/wallet/images/web_bg.png);}*/
+/*  .left_img{ background-image: url(/wallet/images/web_picture_cn.png_@2x.png) }*/
+ /*  .wal_right_img{  background-image: url(/wallet/images/iphone_logo_btc_@2x.png);   background-size: 100% auto;   }
+   .anzhuo{ background-image: url(/wallet/images/iphone_icon_android_@2x.png);   background-size: 35px auto;    }
+   .ios{ background-image: url(/wallet/images/iphone_icon_ios_@2x.png);   background-size: 35px auto;   }*/
+/*   .code{background-image: url(/wallet/images/qr_@2x.png.png) }*/
+}

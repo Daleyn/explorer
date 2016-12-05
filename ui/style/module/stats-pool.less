@@ -1,0 +1,110 @@
+@import "../bootstrap/variables.less";
+@import "../bootstrap/mixins.less";
+
+@rank-table-margin: 30px;
+
+.pool-panel-interval {
+  margin-bottom: 15px;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+
+    &>a {
+      color: #888;
+      font-size: 14px;
+      line-height: 24px;
+      padding: 3px 8px;
+      display: block;
+      border-radius: 3px;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      a {
+        background: #508ad3;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pool-panel-share-table {
+  th,
+  td {
+    text-align: right;
+  }
+
+  th {
+    color: #aaa;
+    font-weight: 400;
+  }
+}
+
+.pool-panel-share-chart {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.pool-panel-rank {
+  float: left;
+  width: 350px;
+  margin-right: @rank-table-margin;
+
+  .table {
+    margin-bottom: 0;
+  }
+
+  tr {
+    background-color: #fff;
+  }
+
+  .table > thead > tr > th,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > th {
+    font-weight: 400;
+    color: #aaa;
+    border-top: none;
+  }
+
+  .table > thead > tr > th,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > td {
+    border-color: #e6e9ee;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+  }
+}
+
+.pool-panel-rank-num {
+  color: #aaa;
+  text-align: right;
+}
+
+.pool-panel-percentage-chart-inner {
+  margin-top: 30px;
+}
+
+.pool-table-width {
+  min-width: 105px !important;
+}

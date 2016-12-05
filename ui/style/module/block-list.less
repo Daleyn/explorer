@@ -1,0 +1,94 @@
+@import '../bootstrap/variables.less';
+@import '../bootstrap/mixins.less';
+
+.blockList-inner {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.blockList-cal {
+  height: 90px;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.blockList-cal-row {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.blockList-cal-unit {
+  display: inline-block;
+  font-size: 14px;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid #e6e9ee;
+  color: #aaa;
+  font-family: @font-family-monospace;
+}
+
+.blockList-cal-num {
+  font-size: 14px;
+  margin-right: 5px;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #888;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #f3f4f7;
+  }
+
+  &.active {
+    background: #508ad3;
+    border-radius: 3px;
+    color: #fff;
+  }
+}
+
+.blockList-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .table {
+    margin-bottom: 0;
+  }
+
+  .table > thead > tr > th,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > th {
+    color: #aaa;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .table > thead > tr > th,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > td {
+    border-top: 1px solid #e6e9ee;
+    height: 40px;
+    vertical-align: middle;
+  }
+}
+
+.blockList-list-timestamp {
+  text-align: right !important;
+}
+
+.blockList-list-smallsize {
+  font-size: 12px;
+}
+
+.address {
+  font-family: @font-family-monospace;
+}

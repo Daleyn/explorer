@@ -1,0 +1,179 @@
+@vertical-bar-height: 80px;
+
+.cal {
+  height: 320px;
+  margin-bottom: 30px;
+
+  .q {
+    fill: #fff;
+  }
+  .q0 {
+    fill: #f3f4f7;
+  }
+  .q1 {
+    fill: #bfefff;
+  }
+  .q2 {
+    fill: #99e5ff;
+  }
+  .q3 {
+    fill: #73dcff;
+  }
+  .q4 {
+    fill: #4dd2ff;
+  }
+  .q5 {
+    fill: #26c9ff;
+  }
+  .q6 {
+    fill: #00bfff;
+  }
+  .q7 {
+    fill: #00a2db;
+  }
+  .q8 {
+    fill: #0084b4;
+  }
+  .q9 {
+    fill: #004c66;
+  }
+  .q10 {
+    fill: #004c66;
+  }
+}
+
+.cal-svg {
+  height: 210px;
+}
+
+.cal-day-note,
+.cal-day-sample {
+  fill: #aaa;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.cal-day-cell {
+  //cursor: pointer;
+}
+
+.cal-month-cell {
+  fill: #e6e9ee;
+}
+
+.cal-month-cell-text {
+  fill: #888;
+}
+
+// graph by div
+
+.cal-month-bar {
+  position: relative;
+  margin-top: 10px;
+}
+
+.cal-month-nav {
+  position: absolute;
+  top: 1px;
+  width: 15px;
+  background: #f3f4f7;
+  line-height: @vertical-bar-height;
+  text-align: center;
+  color: #aaa;
+
+  .transition(background-color 0.1s ease-in);
+  .transition(color 0.1s ease-in);
+
+  &:hover {
+    background: #bfefff;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    visibility: hidden;
+  }
+}
+
+.cal-month-nav-left {
+  left: 15px;
+}
+
+.cal-month-nav-right {
+  right: 12px;
+}
+
+.cal-month-bar-inner {
+  margin-left: 42px;
+  overflow: hidden;
+  width: 1060px;
+  & > ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 9999%;
+    .transition(transform 0.5s ease-in-out);
+  }
+}
+
+.cal-month-bar-yearGroup {
+  float: left;
+  margin-left: -2px;
+  border: 1px solid #fff;
+
+  & > ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.cal-month-bar-yearGroup-year {
+  color: #262626;
+  font-size: 12px;
+  border-left: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  padding-left: 5px;
+  margin-left: -1px;
+}
+
+.cal-month-bar-entity {
+  float: left;
+  margin-right: 2px;
+  width: 18px;
+  height: @vertical-bar-height;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .cal-month-bar-bg {
+      background: #e8e8e8;
+    }
+  }
+}
+
+.cal-month-bar-bg,
+.cal-month-bar-fg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.cal-month-bar-bg {
+  top: 0;
+  background: #fff;
+
+  .transition(background-color 0.1s ease-in);
+}
+
+.cal-month-bar-fg {
+  .transition(height 0.3s ease-in);
+  background: #7799bb;
+}

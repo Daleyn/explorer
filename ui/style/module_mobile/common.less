@@ -1,0 +1,141 @@
+//mixins
+.ul-reset {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+//common class
+.monospace {
+  font-family: @font-family-monospace;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+ul {
+  list-style: none;
+  margin:  0;
+  padding:  0;
+}
+
+.section {
+  background: #fff;
+
+  &:first-child {
+    padding-top: 10px;
+  }
+
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.section-header {
+  padding: 8px 16px;
+
+  border-bottom: 2px solid #e6e9ee;
+
+  & > h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #262626;
+  }
+
+  .icon-section-more {
+    float: right;
+  }
+}
+
+.section-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section-body-inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table-pool-name {
+  .text-overflow();
+}
+
+.section-body-table {
+
+  table-layout: fixed;
+
+  margin-bottom: 0;
+
+  .table-pool-name {
+    .text-overflow();
+  }
+
+  &.table > thead > tr > th,
+  &.table > tbody > tr > th,
+  &.table > tfoot > tr > th,
+  &.table > thead > tr > td,
+  &.table > tbody > tr > td,
+  &.table > tfoot > tr > td {
+    border-top-color: #e6e9ee;
+  }
+
+  &.table > thead > tr > th, &.table > tbody > tr > th, &.table > tfoot > tr > th {
+    font-weight: 400;
+    padding: 5px 0;
+    border-top: none;
+  }
+
+  &.table > thead > tr > td, &.table > tbody > tr > td, &.table > tfoot > tr > td {
+    padding: 10px 0;
+  }
+
+}
+
+.section-body-table-horizontal {
+
+  table-layout: fixed;
+
+  margin-bottom: 0;
+
+  &.table > thead > tr > th,
+  &.table > tbody > tr > th,
+  &.table > tfoot > tr > th,
+  &.table > thead > tr > td,
+  &.table > tbody > tr > td,
+  &.table > tfoot > tr > td {
+    border-top-color: #e6e9ee;
+    padding: 5px 0;
+  }
+
+  &.table > thead > tr > th, &.table > tbody > tr > th, &.table > tfoot > tr > th {
+    font-weight: 400;
+  }
+
+  &.table > thead > tr > td, &.table > tbody > tr > td, &.table > tfoot > tr > td {
+
+  }
+
+}
+
+.table-no-border {
+  &.table > thead > tr > th,
+  &.table > tbody > tr > th,
+  &.table > tfoot > tr > th,
+  &.table > thead > tr > td,
+  &.table > tbody > tr > td,
+  &.table > tfoot > tr > td {
+    border: none;
+  }
+}
+
+.last-row-bottom-border > tbody > tr:last-child > td {
+  border-bottom: 1px solid #e6e9ee;
+}

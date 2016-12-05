@@ -1,0 +1,136 @@
+.container { width: 1180px!important; }
+
+.btn-bm {
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 30px;
+}
+
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+}
+
+.mask-loading {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    opacity: 0.7;
+    z-index: 999;
+  }
+}
+
+.abstract-section {
+
+  float: left;
+  line-height: 30px;
+  width: 50%;
+
+  dl {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  dt {
+    float: left;
+    color: #888;
+    font-weight: 400;
+    margin-right: 10px;
+  }
+
+  dd {
+    float: right;
+  }
+
+  dt, dd {
+    line-height: 30px;
+  }
+
+  &:first-child {
+    border-right: 1px solid #e6e9ee;
+    padding-right: 50px;
+  }
+
+  &:last-child {
+    padding-left: 50px;
+  }
+}
+
+.text-monospace {
+  font-family: @font-family-monospace;
+}
+
+.text-sans-serif {
+  font-family: @font-family-sans-serif;
+}
+
+.cell-poolname {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 8em;
+  .text-overflow();
+}
+
+.block-ver {
+  margin: 0 2px 0 2px;
+}
+
+.btc-credit{
+  cursor:pointer;
+  color:#3c78c2;
+  font-weight:500;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+}
+.credit-fee{
+  opacity:0.1;
+  letter-spacing: -3px;
+  position: absolute;
+  top:450px;
+  left:44.15%;
+  font-size: 50px;
+  text-align: right;
+}
+
+@import (inline) './module/font.css';
+@import (inline) './module/github-markdown.css';
+@import (inline) './module/bootstrap-datepicker3.css';
+@import (inline) './module/bootstrap-datetimepicker.css';
+@import (inline) './module/daterangepicker.css';
+@import './module/cal.less';
+@import './module/icon.less';
+@import './module/panel.less';
+@import './module/page-nav.less';
+@import './module/breadcrumb.less';
+@import './module/header.less';
+@import './module/footer.less';
+@import './module/index.less';
+@import './module/tx.less';
+@import './module/block-list.less';
+@import './module/block-detail.less';
+@import './module/tx-detail.less';
+@import './module/app-index.less';
+@import './module/stats-pool.less';
+@import './module/stats-diff.less';
+@import './module/stats-style.less';
+@import './module/api.less';
+@import './module/pool.less';
+@import './module/http404.less';
+@import './module/404.less';
+@import './module/tx-pulish.less';
+@import './module/tx-public-note.less';
+@import './module/hash-calc.less';
+@import './module/address.less';
+@import './module/app.less';
+@import './module/vote.less';
+@import './module/static-pages.less';

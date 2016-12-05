@@ -1,0 +1,33 @@
+<% for (var i = 0; i < blocks.length; i++) { var blk = blocks[i]; %>
+<tr data-id="<%= blk.height %>">
+    <td class="text-right"><a href="/block/<%= blk.heightLink %>"><%= blk.height %></a></td>
+    <td class="text-left">
+        <i class="icon-pool icon-pool-<%= blk.classname %>"></i><div class="cell-poolname">
+        <% if (blk.poolName.toLowerCase() == 'unknown') { %>
+            <span><%= blk.poolName %></span>
+        <% } else { %>
+            <a href="/stats/pool/<%= encodeURIComponent(blk.poolName) %>"><%= blk.poolName %></a>
+        <% } %>
+        </div>
+    </td>
+    <td class="text-right"><%= blk.size %></td>
+    <td class="text-center indexBlockList-blockAward"><%= blk.reward.slice(0, -4) %><span class="text-muted"><%= blk.reward.slice(-4) %> BTC</span></td>
+    <td class="text-right indexBlockList-blockTimestamp" data-timestamp="<%= blk.timestamp %>"><%= blk.time %></td>
+    <td class="text-center indexBlockList-blockhash"><a href="/<%= blk.hash %>"><%= blk.hash %></a></td>
+    <td class="text-right">
+        <% if (toString.call(blk.version) != '[object Array]') { %>
+            <span class="label label-default block-ver">V <%=  blk.version %> </span>
+        <% } else { %>
+            <% for (var b = 0; b < blk.version.length; b++) { %>
+                <% if (blk.version[b] == 9) { %>
+                    <span class="label label-default block-ver">BIP <%= blk.version[b] %></span>
+                <% } else if (blk.version[b] == ['SegWit']) { %>
+                    <span class="label label-primary block-ver"><%= blk.version[b] %></span>
+                <% } else { %>
+                    <span class="label label-primary block-ver">BIP <%= blk.version[b] %></span>
+                <% } %>
+            <% } %>
+        <% } %>
+    </td>
+</tr>
+<% } %>

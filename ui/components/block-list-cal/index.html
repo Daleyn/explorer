@@ -1,0 +1,33 @@
+<script type="text/template" id="block-list-cal-year">
+    <li class="blockList-cal-row blockList-cal-row-year">
+        <span class="blockList-cal-unit"><%= globals.trans.year %></span>
+        <% for (var i = startYear; i <= endYear; i++) { %>
+        <a href="javascript:" class="blockList-cal-num<%= i == currentYear ? ' active' : '' %>" data-type="year"><%= i %></a>
+        <% } %>
+    </li>
+</script>
+
+<script type="text/template" id="block-list-cal-month">
+    <li class="blockList-cal-row blockList-cal-row-month">
+        <span class="blockList-cal-unit"><%= globals.trans.month %></span>
+        <% for (var i = startMonth; i < endMonth; i++) { %>
+        <a href="javascript:" class="blockList-cal-num<%= i == currentMonth ? ' active' : '' %>" data-type="month"><%= i + 1 %></a>
+        <% } %>
+    </li>
+</script>
+
+<script type="text/template" id="block-list-cal-day">
+    <li class="blockList-cal-row blockList-cal-row-date">
+        <span class="blockList-cal-unit"><%= globals.trans.day %></span>
+        <% for (var i = startDay; i <= endDay; i++) { %>
+        <a href="?date=<%= cur.format('YYYY-MM-' + (i < 10 ? '0' + i : i)) %>" class="blockList-cal-num<%= i == currentDate ? ' active' : '' %>" data-type="date"><%= i %></a>
+        <% } %>
+    </li>
+</script>
+
+<script type="text/template" id="block-list-cal">
+    <ul><%=raw year %>
+        <%=raw month %>
+        <%=raw date %>
+    </ul>
+</script>

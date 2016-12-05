@@ -1,0 +1,53 @@
+@import '../bootstrap/variables.less';
+@import '../bootstrap/mixins.less';
+
+.notfound {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 180px;
+  padding-bottom: 300px;
+  background: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.notfound-inner {
+  display: inline-block;
+  width: 700px;
+}
+
+.notfound-pic {
+  float: left;
+  margin-right: 40px;
+  width: 48px;
+  height: 74px;
+  background-size: 48px 74px;
+  //.img-retina('/images/taper.png?__sprite', '/images/taper@2x.png?__sprite', 48, 74);
+  background: url('/images/taper@2x.png?__sprite') 0 0 no-repeat;
+}
+
+.notfound-form {
+  input {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    &:focus {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  button {
+    background: #3c78c2;
+    color: #fff;
+    width: 60px;
+  }
+}
+
+.notfound-desc {
+  font-size: 14px;
+  line-height: 19px;
+  color: #888;
+  margin-top: 20px;
+}

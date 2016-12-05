@@ -1,0 +1,64 @@
+@import '/style/bootstrap/mixins.less';
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src:
+  local('Roboto Condensed'),
+  local('RobotoCondensed-Regular'),
+  url('/fonts/Roboto_Condensed_400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+  local('Open Sans'),
+  local('OpenSans'),
+  url('/fonts/Open_Sans_400.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  color: #666;
+}
+
+.container {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+p {
+  color: #999;
+}
+
+.heading {
+  h1 {
+    font-size: 48px;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 111px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.reqid {
+  font-size: 10px;
+  color: #fff;
+}

@@ -1,0 +1,56 @@
+@import '../bootstrap/variables.less';
+@import '../bootstrap/mixins.less';
+
+.blockAbstract {
+
+}
+
+.blockAbstract-inner {
+  display: inline-block;
+}
+
+.blockAbstract-section {
+
+  float: left;
+  line-height: 30px;
+
+  dl {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  dt {
+    float: left;
+    color: #888;
+    font-weight: 400;
+  }
+
+  dd {
+    float: right;
+    margin-left: 8px;
+  }
+
+  dt, dd {
+    line-height: 30px;
+  }
+
+  &:not(:last-child) {
+    width: 275px;
+    border-right: 1px solid #d8d8d8;
+    padding-right: 15px;
+    margin-right: 7px;
+  }
+}
+
+.blockAbstract-section-smallsize {
+
+  dd {
+    font-size: 12px;
+    font-family: @font-family-monospace;
+  }
+
+}
+
+html[lang="ru"] .blockRussianWordBreak {
+  max-width: 90px;
+}

@@ -1,0 +1,266 @@
+@import "../bootstrap/variables.less";
+@import "../bootstrap/mixins.less";
+
+.tx-item {
+  font-size: 14px;
+  margin-bottom: 50px;
+
+  > .table {
+    table-layout: fixed;
+    margin-bottom: 0;
+    border: 1px solid #fff;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  &:hover {
+    > .table {
+      border-color: #ddd;
+    }
+  }
+
+  td:first-child {
+    padding-left: 20px !important;
+  }
+
+  td:last-child {
+    padding-right: 20px !important;
+  }
+}
+
+// tx show 页面样式特别定制
+.txDetail {
+  .tx-item {
+    > .table {
+      &:hover {
+        border-color: #fff;
+      }
+
+      .txio > td {
+        vertical-align: top;
+      }
+    }
+
+    margin-bottom: 0;
+  }
+}
+
+.tx-coinbase-label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 5px;
+}
+
+.tx-coinbase-label-tooltip {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.tx-coinbase-decoded {
+  max-width: 400px;
+  word-break: break-all;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tx-item-summary {
+  background: #f3f4f7;
+
+  td {
+    border-top: none !important;
+    height: 38px !important;
+    vertical-align: middle !important;
+  }
+
+  td:first-child {
+    font-family: @font-family-monospace;
+  }
+
+  td:last-child {
+    text-align: right;
+  }
+}
+
+.tx-item-summary-hash {
+
+}
+
+.tx-item-summary-timestamp {
+  margin-left: 20px;
+  color: #aaa;
+}
+
+.tx-item-summary-fee {
+  margin-right: 20px;
+}
+
+.tx-item-footer-note {
+  border-top: none !important;
+}
+
+.tx-item-footer-note-inner {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: #aaa;
+  width: 80%;
+  .text-overflow();
+}
+
+.tx-item-footer-additional {
+  border-top: none !important;
+  text-align: right;
+  line-height: 40px;
+}
+
+.tx-item-summary,
+.tx-item-io,
+.tx-item-footer {
+  td {
+    width: 50%;
+  }
+}
+
+.tx-item-address {
+  font-family: @font-family-monospace;
+}
+
+.tx-item-showalltx {
+  float: left;
+  color: #aaa;
+  line-height: 30px;
+}
+
+@tx-item-footer-additional-box-lineheight: 30px;
+.tx-item-footer-additional-box {
+  font-size: 16px;
+  line-height: @tx-item-footer-additional-box-lineheight;
+  background: #eee;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 10px;
+  position: relative;
+
+  margin-left: 30px;
+
+  &.txio-address-income,
+  &.txio-address-outcome {
+    color: #fff;
+  }
+}
+
+.tx-item-footer-additional-box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: (@tx-item-footer-additional-box-lineheight / 2) solid #fff;
+  border-top: (@tx-item-footer-additional-box-lineheight / 2) solid transparent;
+  border-bottom: (@tx-item-footer-additional-box-lineheight / 2) solid transparent;
+}
+
+.txio {
+  font-size: 14px;
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    line-height: 30px;
+  }
+}
+
+.txio-mergedSign {
+  position: absolute;
+}
+
+.txio-mergedSign-in {
+  left: 10px;
+}
+
+.txio-mergedSign-out {
+  left: 40px;
+}
+
+//ugly hack for bootstrap table style for .txio
+.tx-item {
+  .table {
+    .txio > td {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      vertical-align: middle;
+      position: relative;
+
+      &:first-child {
+        padding-right: 0;
+        ul {
+          padding-right: 50px;
+        }
+      }
+
+      &:last-child {
+        position: relative;
+        padding-left: 0;
+
+        ul {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+@txio-arrow-size: 30px;
+.txio-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -@txio-arrow-size / 2;
+  left: -@txio-arrow-size / 2;
+  font-size: 15px;
+  line-height: @txio-arrow-size;
+  width: @txio-arrow-size;
+  height: @txio-arrow-size;
+  border-radius: @txio-arrow-size / 2;
+  color: #fff;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.txio-address-income {
+  background-color: #66bb44;
+}
+
+.txio-address-outcome {
+  background-color: #d75c33;
+}
+
+.txio-address-coinbasecome {
+  background-color: #ddd;
+}
+
+.txio-address {
+  font-family: @font-family-monospace;
+}
+
+.txio-address-decodefail {
+  font-family: @font-family-sans-serif;
+}
+
+.txio-amount {
+  float: right;
+}
+
+.tx-item-footer-additional {
+  padding-left: 50px !important;
+}

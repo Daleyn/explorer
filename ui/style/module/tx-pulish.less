@@ -1,0 +1,39 @@
+@import '../bootstrap/variables.less';
+@import '../bootstrap/mixins.less';
+
+#broadcast-trade-text:focus {
+  border-color: #66afe9;
+  outline: 0;
+}
+#broadcast-trade-text {
+  margin-right: 300px;
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  height: 15em;
+  resize: vertical;
+  padding: 15px;
+  font-family: "Droid Sans Mono",Menlo,Monaco,Consolas,"Courier New",monospace;
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15 sease-in-out 0s;;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#broadcast-trade-btn {
+  float: right;
+  margin-top: 20px;
+}
+
+.show-error {
+  opacity: 0;
+  font-size: 16px;
+  -webkit-transition: opacity .2s ease-in;
+  -o-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+.show {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 1;
+}

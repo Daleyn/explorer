@@ -1,0 +1,8 @@
+<ns0:OpenSearchDescription xmlns:ns0="http://a9.com/-/spec/opensearch/1.1/" xmlns:ns1="http://www.mozilla.org/2006/browser/search/">
+    <ns0:ShortName>BTC.com</ns0:ShortName>
+    <ns0:Description>Search BTC.com</ns0:Description>
+    <ns0:InputEncoding>UTF-8</ns0:InputEncoding>
+    <ns0:Image height="16" type="image/x-icon" width="16">/images/favicon.png</ns0:Image>
+    <ns0:Url method="get" template="https://btc.com/search/{searchTerms}" type="text/html" />
+    <ns1:SearchForm>https://btc.com</ns1:SearchForm>
+</ns0:OpenSearchDescription>

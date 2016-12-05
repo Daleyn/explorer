@@ -1,0 +1,19 @@
+<script type="text/template" id="preference">
+    <ul class="preference-popover-list">
+        <li class="preference-popover-item">
+            <label class="preference-popover-item-option">
+                <input type="checkbox" data-key="ioscript" <%= ioscript ? 'checked' : ''  %>/>
+                <span>显示交易脚本</span>
+            </label>
+            <p class="preference-popover-item-desc">开启后显示交易的输入和输出脚本</p>
+        </li>
+        <li class="preference-popover-item">
+            <label class="preference-popover-item-option">
+                <input type="checkbox" data-key="omittx" <%= omittx ? 'checked' : '' %> />
+                <span>交易缩略显示</span>
+            </label>
+            <p class="preference-popover-item-desc">交易的输入或输出数量大于一定范围时，省略输出以节省空间</p>
+        </li>
+    </ul>
+    <p class="preference-popover-item-desc">修改选项后请刷新生效</p>
+</script>
